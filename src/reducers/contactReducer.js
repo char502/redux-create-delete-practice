@@ -8,3 +8,7 @@ export default (state = [], action) => {
       return state;
   }
 };
+
+// Here, one thing to note that, we have not mutated the state directly instead we have returned a new state.
+
+// So, the new state is original state array + new contact data and returns a new collection.
