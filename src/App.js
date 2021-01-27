@@ -28,6 +28,7 @@ class App extends Component {
       name: '',
     });
     this.props.createContact(contact);
+    console.log(this.props);
   }
 
   listView(data, index) {
@@ -75,9 +76,10 @@ class App extends Component {
           <hr />
           {
             <ul className='list-group'>
-              {this.props.contacts.map((contact, i) =>
-                this.listView(contact, i)
-              )}
+              {/* {this.props.arr.map((contact, i) => this.listView(contact, i))} */}
+              {this.props.arr.map(item => {
+                return <div>{item.contact}</div>;
+              })}
             </ul>
           }
         </div>
